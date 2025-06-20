@@ -3,6 +3,32 @@
     "name": "i18n.Global",
     "settings": [
       {
+        "type":"heading",
+        "content":"Customer Group Banner"
+      },
+      {
+        "type":"text",
+        "label":"Customer Group Banner Message",
+        "id":"cg_banner_message",
+        "force_reload":true
+      },
+      {
+        "type":"text",
+        "label":"Customer Group ID",
+        "id":"cg_banner_id_num",
+        "force_reload":true
+      },
+      {
+        "type":"color",
+        "label":"Customer Group Banner Text color",
+        "id":"cg-banner-text"
+      },
+      {
+        "type":"color",
+        "label":"Customer Group Banner Background Color",
+        "id":"cg-background-primary"
+      },
+      {
         "type": "heading",
         "content": "i18n.BackgroundAndLines"
       },
@@ -147,6 +173,11 @@
             "group": "i18n.Montserrat",
             "label": "i18n.MontserratLight",
             "value": "Google_Montserrat_400"
+          },
+          {
+            "group": "i18n.DidactGotham",
+            "label": "i18n.DidactGotham",
+            "value": "Google_DidactGotham_400"
           },
           {
             "group": "i18n.OpenSans",

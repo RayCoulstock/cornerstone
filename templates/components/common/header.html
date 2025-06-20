@@ -29,6 +29,10 @@
         {{> components/common/navigation-menu}}
     </div>
     {{{region name="header_navigation_bottom--global"}}}
+
+    {{#if customer.customer_group_id "==" theme_settings.cg_banner_id_num}}
+        {{> components/common/customer-group-special}}
+    {{/if}}
 </header>
 {{{region name="header_bottom--global"}}}
 {{{region name="header_bottom"}}}

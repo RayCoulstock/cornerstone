@@ -512,6 +512,9 @@
     "pl": "Montserrat",
     "ja": "モンセラート"
   },
+  "i18n.DidactGotham": {
+    "default": "DidactGotham"
+  },
   "i18n.OpenSans": {
     "default": "Open Sans",
     "fr": "Open Sans",
