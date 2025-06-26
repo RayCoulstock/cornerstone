@@ -59,6 +59,14 @@ export default class Product extends PageManager {
         });
 
         this.productReviewHandler();
+        // Example Code
+        this.helloWorld();
+    }
+
+    // Example Code
+    helloWorld() {
+        console.log('[assets/js/theme/product.js]: Hello World!');
+        console.log('[assets/js/theme/product.js]: ' + this.context.productThumbSize)
     }
 
     ariaDescribeReviewInputs($form) {

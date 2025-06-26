@@ -12,8 +12,8 @@ product:
 {{inject 'productId' product.id}}
 
 {{#partial "page"}}
-    {{inject 'productThumbSize' theme_settings.productthumb_size}}
 
+This is a custom page
     {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
 
     {{#each product.shipping_messages}}
@@ -37,8 +37,5 @@ product:
     </div>
 
     {{> components/products/schema}}
-
-    <div id="crystal-container" style="width: 100%; height: 400px;"></div>
-    <script type="module" src="../../assets/js/theme/crystal.js"></script>
 {{/partial}}
 {{> layout/base}}
