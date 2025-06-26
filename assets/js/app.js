@@ -1,9 +1,9 @@
 __webpack_public_path__ = window.__webpack_public_path__; // eslint-disable-line
 
 import Global from './theme/global';
-import React from 'react';
-import ReactDOM from 'react-dom';
-import CouponDrawer from './components/CouponDrawer';
+// import React from 'react';
+// import ReactDOM from 'react-dom';
+// import CouponDrawer from './components/CouponDrawer';
 
 const getAccount = () => import('./theme/account');
 const getLogin = () => import('./theme/auth');
@@ -55,7 +55,10 @@ const pageClasses = {
     wishlists: () => import('./theme/wishlist'),
 };
 
-const customClasses = {};
+const customClasses = {
+    'pages\\custom\\category\\react-demo': () => import('./theme/custom/react-demo'), // Windows
+    'pages/custom/category/react-demo': () => import('./theme/custom/react-demo'), // Mac/Linux
+};
 
 /**
  * This function gets added to the global window and then called
@@ -96,7 +99,7 @@ window.stencilBootstrap = function stencilBootstrap(pageType, contextJSON = null
                     });
                 });
 
-                ReactDOM.render(<CouponDrawer />, document.querySelector('#coupondrawer'));
+                // ReactDOM.render(<CouponDrawer />, document.querySelector('#coupondrawer'));
             });
         },
     };

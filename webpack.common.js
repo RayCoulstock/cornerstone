@@ -41,15 +41,25 @@ module.exports = {
                 },
             },
             {
-                test: require.resolve("jquery"),
-                loader: "expose-loader",
+                test: require.resolve('jquery'),
+                loader: 'expose-loader',
                 options: {
-                  exposes: ["$"],
+                    exposes: ['$'],
+                },
+            },
+            {
+                test: /\.jsx$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/preset-react'],
+                    },
                 },
             },
             {
                 test: /\.css/,
-                use: [ 'style-loader', 'css-loader' ],
+                use: ['style-loader', 'css-loader'],
             },
         ],
     },
@@ -82,7 +92,7 @@ module.exports = {
         'transform-object-assign',
     ],
     resolve: {
-        fallback:  { "url": require.resolve("url/") },
+        fallback: { url: require.resolve('url/') },
         alias: {
             jquery: path.resolve(__dirname, 'node_modules/jquery/dist/jquery.min.js'),
             jstree: path.resolve(__dirname, 'node_modules/jstree/dist/jstree.min.js'),
@@ -90,5 +100,6 @@ module.exports = {
             'slick-carousel': path.resolve(__dirname, 'node_modules/slick-carousel/slick/slick.min.js'),
             'svg-injector': path.resolve(__dirname, 'node_modules/svg-injector/dist/svg-injector.min.js'),
         },
+        extensions: ['.js', '.jsx'],
     },
 };
