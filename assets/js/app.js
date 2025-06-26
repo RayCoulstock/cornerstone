@@ -1,9 +1,9 @@
 __webpack_public_path__ = window.__webpack_public_path__; // eslint-disable-line
 
 import Global from './theme/global';
-// import React from 'react';
-// import ReactDOM from 'react-dom';
-// import CouponDrawer from './components/CouponDrawer';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import BulkVariantForm from './bulk-variant-form/bulk-variant-form';
 
 const getAccount = () => import('./theme/account');
 const getLogin = () => import('./theme/auth');
@@ -103,5 +103,12 @@ window.stencilBootstrap = function stencilBootstrap(pageType, contextJSON = null
             });
         },
     };
+};
+
+window.initBulkVariantForm = function initBulkVariantForm(id) {
+    ReactDOM.render(
+        React.createElement(BulkVariantForm, id, null),
+        document.getElementById('bulk-variant-form'),
+    );
 };
 
